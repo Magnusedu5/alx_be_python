@@ -1,0 +1,9 @@
+numbers = [1, 4, 6, 2, 5, 8, 9]
+
+total = 0
+for x in numbers:
+
+    total = total + x
+    
+print(f"{total}")
+
