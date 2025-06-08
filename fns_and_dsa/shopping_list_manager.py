@@ -19,13 +19,8 @@ def remove_items(shopping_list):
         print(f"'{item}' not found in your shopping list.")
 
 def view_list(shopping_list):
-    if not shopping_list:
-         print("Your shopping list is empty.")
-    else:
-        print("\n🛒 Your Shopping List:")
-        for index, item in enumerate(shopping_list, start=1):
-            print(f"{index}. {item}")
-            
+    print (shopping_list)
+
 def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
@@ -37,7 +32,7 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = int(input("Enter your choice: "))
+        choice = float(input("Enter your choice: "))
 
         if choice == '1':
             add_items(shopping_list)
