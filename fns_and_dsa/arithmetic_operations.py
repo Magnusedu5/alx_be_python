@@ -6,6 +6,11 @@ def perform_operation(num1, num2, operation):
     elif operation == 'multiply':
         print(num1 * num2)
     elif operation == 'divide':
-        print(num1 / num2)
+        if num2 == 0:
+            print("Can't perform this operation")
+        else:
+            print(num1 / num2)
     else:
         print("Error")
+
+perform_operation(10, 0, 'divide')
