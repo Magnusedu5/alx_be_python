@@ -4,7 +4,7 @@ class BankAccount:
         self.account_balance = initial_balance
 
     def deposit(self, amount):
-        7d  bnself.account_balance += amount
+        self.account_balance += amount
         return self.account_balance
 
 
