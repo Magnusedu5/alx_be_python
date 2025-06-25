@@ -5,6 +5,8 @@ class Book:
     
     def get_details(self):
         return f"{self.title} by {self.author}"
+    def __str__(self):
+        pass
 
 class EBook(Book):
     def __init__(self, title, author, file_size):
