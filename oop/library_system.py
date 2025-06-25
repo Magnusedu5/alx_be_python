@@ -4,15 +4,15 @@ class Book:
         self.author = author
     
     def get_details(self):
-        return f"Title: {self.title}, Author: {self.author}"
+        return f"{self.title} by {self.author}"
 
-class Ebook(Book):
+class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
         self.file_size = file_size
 
     def get_details(self):
-        return f"{super().get_details()},File_size: {self.file_size}"
+        return f"{super().get_details()},File_size: {self.file_size}KB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -20,11 +20,11 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def get_details(self):
-        return f"{super().get_details()}, Pages: {self.page_count}"
+        return f"{super().get_details()}, Page Count: {self.page_count}"
 
-class Library:
-    def __init__(self, books):
-        self.books = [Book, Ebook, PrintBook]
+class Library():
+    def __init__(self):
+        self.books = []
 
     def add_book(self, book):
         self.book = book
